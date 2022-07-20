@@ -1,1 +1,22 @@
-<p>browse works!</p>
+<h2>Telekocsi order</h2>
+
+<table>
+    <tr>
+        <th>Departure City</th>
+        <th>Place Of Arrival</th>
+        <th>Departure Time</th>
+        <th>Km</th>
+        <th>Ad Sender</th>
+        <th>Email</th>
+        <th>Actions </th>
+    </tr>
+    <tr *ngFor="let order of this.service.orders">
+        <td>{{order.cityFrom}}</td>
+        <td>{{order.cityTo}}</td>
+        <td>{{order.date}}</td>
+        <td>{{order.km}} km</td>
+        <td>{{order.owner.firstName + ' ' + order.owner.lastName}}</td>
+        <td>{{order.owner.email}}</td>
+        <td><button>Delete</button></td>
+    </tr>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  service: OrderService;
+  constructor(service: OrderService) { 
+    this.service = service;
+  }
 
   ngOnInit(): void {
+    this.service.disableGuest();
   }
 
 }

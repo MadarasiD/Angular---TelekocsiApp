@@ -1,7 +1,11 @@
-<div class="navbar">
+<div class="navbar" *ngIf="!this.service.isLoggedIn()">
+    <a routerLink="/browse">Browse</a>
+    <a routerLink="/login">Login</a>
+</div>
+
+<div class="navbar" *ngIf="this.service.isLoggedIn()">
     <a routerLink="/browse">Browse</a>
     <a routerLink="/add">Add</a>
-    <a routerLink="/login">Login</a>
     <a routerLink="/logout">Logout</a>
 </div>
 <div class="content">

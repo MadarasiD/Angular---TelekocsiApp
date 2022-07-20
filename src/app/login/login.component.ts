@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
     this.service = service;
   }
   ngOnInit(): void {
+    this.service.disableUsers();
   }
 
 }
