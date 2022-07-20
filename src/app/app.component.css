@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #d2ccc4 65%, #2F4353 35% );
+}
+
+.navbar a {
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(240, 79, 4), rgb(218, 108, 5) 50%, rgb(232, 233, 237) 50%);
+    line-height: 40px;
+    margin: 20px;
+    font-size: 1.3em;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+.navbar a:hover {
+    background-position: 0 100%;
+    border-bottom: 2px solid rgb(240, 79, 4);
+    border-left: 2px solid rgb(240, 79, 4);
+    padding: 2px;
+}
+
+.content {
+    padding: 20px;
+    padding-top: 0;
+}
