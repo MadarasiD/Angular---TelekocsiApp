@@ -1,5 +1,7 @@
 <h2>Telekocsi order</h2>
 
+<h4><p></p> 45 hirdetés közül választhatsz, amelyek Budapestről indulnak.</h4>
+
 <table>
     <tr>
         <th>Departure City</th>
@@ -8,15 +10,15 @@
         <th>Km</th>
         <th>Ad Sender</th>
         <th>Email</th>
-        <th>Actions </th>
+        <th *ngIf="this.service.isLoggedIn()">Actions </th>
     </tr>
-    <tr *ngFor="let order of this.service.orders">
-        <td>{{order.cityFrom}}</td>
+    <tr  *ngFor="let order of this.service.orders">
+        <td >{{order.cityFrom}}</td>
         <td>{{order.cityTo}}</td>
         <td>{{order.date}}</td>
         <td>{{order.km}} km</td>
         <td>{{order.owner.firstName + ' ' + order.owner.lastName}}</td>
         <td>{{order.owner.email}}</td>
-        <td><button>Delete</button></td>
+        <td *ngIf="this.service.isLoggedIn()"><button>Delete</button></td>
     </tr>
 </table>

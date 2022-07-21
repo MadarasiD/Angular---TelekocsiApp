@@ -32,7 +32,7 @@ export class OrderService {
 
   public logout() {
     localStorage.removeItem('ordertoken');
-    this.router.navigate(['/browse']);
+    this.router.navigate(['/login']);
   }
 
   public disableGuest(){
