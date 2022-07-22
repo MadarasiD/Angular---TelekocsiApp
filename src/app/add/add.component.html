@@ -1,1 +1,24 @@
-<p>add works!</p>
+
+
+<div class="formdiv" fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+    <div fxFlex="25">
+        <form fxLayoutAlign="stretch" fxLayout="column">
+
+            <h2 fxLayoutAlign="center">Add New Route</h2>
+
+        <label>Departure City</label>
+        <input type="text" [(ngModel)] =  "this.service.currentOrder.cityFrom">
+
+        <label>Place Of Arrival</label>
+        <input type="text" [(ngModel)] =  "this.service.currentOrder.cityTo">
+
+        <label>Departure Time</label>
+        <input type="date" [(ngModel)] =  "this.service.currentOrder.date">
+
+        <label>Km</label>
+        <input type="number" [(ngModel)] =  "this.service.currentOrder.km">
+
+        <button (click)="this.service.createOrder()">Create</button>
+    </form>
+    </div>
+</div>

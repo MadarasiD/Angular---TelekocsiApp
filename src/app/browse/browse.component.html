@@ -19,6 +19,9 @@
         <td>{{order.km}} km</td>
         <td>{{order.owner.firstName + ' ' + order.owner.lastName}}</td>
         <td>{{order.owner.email}}</td>
-        <td *ngIf="this.service.isLoggedIn()"><button>Delete</button></td>
+        <td *ngIf="this.service.isLoggedIn()">
+            <button 
+            (click)="this.service.removeORder(order.id)">Delete</button>
+        </td>
     </tr>
 </table>

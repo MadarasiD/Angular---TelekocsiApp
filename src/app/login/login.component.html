@@ -4,10 +4,10 @@
             <h2 fxLayoutAlign="center">Login</h2>
 
             <label >Username:</label>
-            <input type="text"  placeholder="Write Your Username..." [(ngModel)] = "this.service.loginmodel.username" />
+            <input type="text"  placeholder="Write Your Username..."  [(ngModel)] = "this.service.loginmodel.username" />
 
             <label >Password:</label>
-            <input type="password" placeholder="Write Your Password..." [(ngModel)] = "this.service.loginmodel.password" />
+            <input type="password" placeholder="Write Your Password..."  [(ngModel)] = "this.service.loginmodel.password" />
 
             <button (click)="this.service.login()">Login</button>
         </form>
